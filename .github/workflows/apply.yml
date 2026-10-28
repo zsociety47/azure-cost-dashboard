@@ -1,0 +1,14 @@
+# Calls the shared apply job. Do not set a GitHub environment:
+# that would change the OpenID Connect subject and Azure would refuse it.
+
+name: Apply
+on:
+  push:
+    branches: [main]
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  apply:
+    uses: zsociety47/cloud-projects/.github/workflows/azure-terraform-apply.yml@main
+    secrets: inherit

@@ -1,0 +1,12 @@
+# Copy to terraform.tfvars (gitignored). Defaults in variables.tf are this
+# proof of concept. Change the resource group and the owner tag.
+# Do not put the alert email here. That stays in the environment.
+
+resource_group_name = "rg-cost-poc-yourname01"
+
+tags = {
+  project     = "08-azure-cost-dashboard"
+  environment = "poc"
+  managed-by  = "terraform"
+  owner       = "yourname"
+}
