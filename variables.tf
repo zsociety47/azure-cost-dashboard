@@ -66,9 +66,9 @@ variable "budget_amount" {
 }
 
 variable "budget_start_date" {
-  description = "First day of the budget, in RFC3339. Azure rejects a monthly start date outside the current month. The export used 2026-03-01, which is outside October 2026."
+  description = "First day of the budget, in RFC3339. Azure rejects a monthly start date outside the current month. The export used 2026-03-01. This apply is in November 2026, so the start is 2026-11-01."
   type        = string
-  default     = "2026-10-01T00:00:00Z"
+  default     = "2026-11-01T00:00:00Z"
 }
 
 variable "budget_threshold_percents" {

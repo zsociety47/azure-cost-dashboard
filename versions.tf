@@ -8,9 +8,8 @@
 # shared pipeline-foundation module, not by this repository, so azuread
 # is not pinned here.
 #
-# Remote state is a separate backend.tf. It is not in this file.
-# That file is added after the shared state account exists, because
-# terraform init would fail if it pointed at an account that is not there yet.
+# Remote state is backend.tf. It points at the shared account.
+# terraform init has been run. The blob key is cost-dashboard.tfstate.
 
 terraform {
   required_version = "~> 1.15.0"
